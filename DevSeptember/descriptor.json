@@ -1,0 +1,15 @@
+﻿{
+  "Descriptor": {
+    "UId": "a1c9edcd-7de8-a4de-d04d-4a0d855a7761",
+    "Name": "DevSeptember",
+    "ModifiedOnUtc": "\/Date(1632254096000)\/",
+    "Maintainer": "Customer",
+    "DependsOn": [
+      {
+        "UId": "cbc7d8fb-0ab5-42a1-bc8c-60da507c44c4",
+        "PackageVersion": "7.8.0",
+        "Name": "ServiceEnterpriseDefSettings"
+      }
+    ]
+  }
+}
