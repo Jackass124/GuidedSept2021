@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="vi-VN">
+	<Group Type="String">
+		<Items>
+			<Item Name="Images.72a10ccc-5746-4ee1-9a4d-61fb14d53899.Caption" Value="EnrichCloudIcon" />
+			<Item Name="LocalizableStrings.ChangeQueueItemDateButtonCaption.Value" Value="Hoãn lại cho đến khi" />
+			<Item Name="LocalizableStrings.CompletenessHint.Caption" Value="Tin nhắn đến người dùng 1" />
+			<Item Name="LocalizableStrings.CompletenessHint.Value" Value="Phần trăm mức hoàn thành hồ sơ. Click vào dấu chỉ dẫn để xem dữ liệu nào mà bạn cần để hoàn thành hồ sơ." />
+			<Item Name="LocalizableStrings.CompletenessLabel.Value" Value="Hoàn thành hồ sơ" />
+			<Item Name="LocalizableStrings.ContactPageServiceTab.Value" Value="Bảo trì" />
+			<Item Name="LocalizableStrings.EnrichCloudCaption.Value" Value="Đã tìm thấy dữ liệu mới" />
+			<Item Name="LocalizableStrings.ESNTabCaption.Value" Value="Tin tức" />
+			<Item Name="LocalizableStrings.FillContactWithSocialNetworksDataActionCaption.Value" Value="Cập nhật với dữ liệu mạng xã hội" />
+			<Item Name="LocalizableStrings.MultipleQueueItemsFoundError.Value" Value="Có nhiều hơn một phần tử dãy chờ được kết nối với quá trình này. Id quá trình: {0}" />
+			<Item Name="LocalizableStrings.PostponeQueueItemButtonCaption.Value" Value="Xếp lại dãy chờ" />
+			<Item Name="LocalizableStrings.PostponeQueueItemError.Value" Value="Không thể xếp lại dãy chờ cho mục này. Tin nhắn bị lỗi: {0}" />
+			<Item Name="LocalizableStrings.QueueItemIsEmptyError.Value" Value="Trang chưa được kết nối với phần tử dãy chờ máy trung gian. Hành động bị hủy." />
+			<Item Name="LocalizableStrings.QueueItemPostponeFailedMessage.Value" Value="Không thể xếp lại dãy chờ cho mục này" />
+			<Item Name="LocalizableStrings.QueueItemPostponeSucceedMessage.Value" Value="Xếp lại dãy chờ thành công" />
+			<Item Name="LocalizableStrings.RelationshipTabCaption.Value" Value="Đã được kết nối đến" />
+			<Item Name="LocalizableStrings.SubscribeCaption.Value" Value="Theo dõi tin tức" />
+			<Item Name="LocalizableStrings.SubscribedInformationDialog.Value" Value="Bạn hiện đang theo dõi tin tức: {0}" />
+			<Item Name="LocalizableStrings.TimelineTabCaption.Value" Value="Mốc thời gian" />
+			<Item Name="LocalizableStrings.UnsubscribeCaption.Value" Value="Bỏ theo dõi tin tức" />
+			<Item Name="LocalizableStrings.UnsubscribedInformationDialog.Value" Value="Bạn vừa dừng theo dõi tin tức: {0}" />
+		</Items>
+	</Group>
+</Resources>

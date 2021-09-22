@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="nl-NL">
+	<Group Type="String">
+		<Items>
+			<Item Name="Images.72a10ccc-5746-4ee1-9a4d-61fb14d53899.Caption" Value="EnrichCloudIcon" />
+			<Item Name="LocalizableStrings.ChangeQueueItemDateButtonCaption.Value" Value="Uitstellen tot" />
+			<Item Name="LocalizableStrings.CompletenessHint.Caption" Value="Bericht aan gebruiker 1" />
+			<Item Name="LocalizableStrings.CompletenessHint.Value" Value="Percentage gereed van profiel. Klik op de indicator om te bekijken welke gegevens u nodig hebt om het profiel te voltooien." />
+			<Item Name="LocalizableStrings.CompletenessLabel.Value" Value="Profiel compleet" />
+			<Item Name="LocalizableStrings.ContactPageServiceTab.Value" Value="Onderhoud" />
+			<Item Name="LocalizableStrings.EnrichCloudCaption.Value" Value="New data found" />
+			<Item Name="LocalizableStrings.ESNTabCaption.Value" Value="Feed" />
+			<Item Name="LocalizableStrings.FillContactWithSocialNetworksDataActionCaption.Value" Value="Bijwerken met sociale netwerkgegevens" />
+			<Item Name="LocalizableStrings.MultipleQueueItemsFoundError.Value" Value="Meerdere wachtrijen verbonden met het proces. Proces Id: {0}" />
+			<Item Name="LocalizableStrings.PostponeQueueItemButtonCaption.Value" Value="Plaats opnieuw in wachtrij" />
+			<Item Name="LocalizableStrings.PostponeQueueItemError.Value" Value="Niet in staat om opnieuw wachtrij te plaatsen. Error message: {0}" />
+			<Item Name="LocalizableStrings.QueueItemIsEmptyError.Value" Value="Pagina is niet aangesloten op de agent desktop wachtrij element. Actie geannuleerd." />
+			<Item Name="LocalizableStrings.QueueItemPostponeFailedMessage.Value" Value="Niet in staat om opnieuw wachtrij te plaatsen" />
+			<Item Name="LocalizableStrings.QueueItemPostponeSucceedMessage.Value" Value="Met succes opnieuw in de wachtrij" />
+			<Item Name="LocalizableStrings.RelationshipTabCaption.Value" Value="Verbonden met" />
+			<Item Name="LocalizableStrings.SubscribeCaption.Value" Value="Volg de feed" />
+			<Item Name="LocalizableStrings.SubscribedInformationDialog.Value" Value="U volgt nu feed: {0}" />
+			<Item Name="LocalizableStrings.TimelineTabCaption.Value" Value="Tijdlijn" />
+			<Item Name="LocalizableStrings.UnsubscribeCaption.Value" Value="Feed niet meer volgen" />
+			<Item Name="LocalizableStrings.UnsubscribedInformationDialog.Value" Value="U bent gestopt met het volgen van de feed: {0}" />
+		</Items>
+	</Group>
+</Resources>
