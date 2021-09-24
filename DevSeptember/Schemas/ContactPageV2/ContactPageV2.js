@@ -4,7 +4,21 @@ define("ContactPageV2", [], function() {
 		attributes: {},
 		modules: /**SCHEMA_MODULES*/{}/**SCHEMA_MODULES*/,
 		details: /**SCHEMA_DETAILS*/{}/**SCHEMA_DETAILS*/,
-		businessRules: /**SCHEMA_BUSINESS_RULES*/{}/**SCHEMA_BUSINESS_RULES*/,
+		businessRules: /**SCHEMA_BUSINESS_RULES*/{
+			"City": {
+				"FiltrationCityByCountry": {
+					"uId": "611b4cc9-0bef-4504-913a-4f334aaa6a3c",
+					"enabled": true,
+					"ruleType": 1,
+					"baseAttributePatch": "Country",
+					"comparisonType": 3,
+					"autoClean": true,
+					"autocomplete": true,
+					"type": 1,
+					"attribute": "Country"
+				}
+			}
+		}/**SCHEMA_BUSINESS_RULES*/,
 		methods: {},
 		dataModels: /**SCHEMA_DATA_MODELS*/{}/**SCHEMA_DATA_MODELS*/,
 		diff: /**SCHEMA_DIFF*/[
@@ -158,6 +172,40 @@ define("ContactPageV2", [], function() {
 						"row": 2
 					}
 				}
+			},
+			{
+				"operation": "insert",
+				"name": "Countryeb89148b-157c-4384-ba49-31b09f9fb141",
+				"values": {
+					"layout": {
+						"colSpan": 12,
+						"rowSpan": 1,
+						"column": 0,
+						"row": 3,
+						"layoutName": "ContactGeneralInfoBlock"
+					},
+					"bindTo": "Country"
+				},
+				"parentName": "ContactGeneralInfoBlock",
+				"propertyName": "items",
+				"index": 6
+			},
+			{
+				"operation": "insert",
+				"name": "City4001a6ef-f770-4179-a4e6-d3c0e422b4bd",
+				"values": {
+					"layout": {
+						"colSpan": 12,
+						"rowSpan": 1,
+						"column": 12,
+						"row": 3,
+						"layoutName": "ContactGeneralInfoBlock"
+					},
+					"bindTo": "City"
+				},
+				"parentName": "ContactGeneralInfoBlock",
+				"propertyName": "items",
+				"index": 7
 			},
 			{
 				"operation": "merge",

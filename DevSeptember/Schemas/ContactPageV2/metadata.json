@@ -75,5 +75,4 @@
 = MetaData.Schema.B6 "a1c9edcd-7de8-a4de-d04d-4a0d855a7761"
 = MetaData.Schema.B8 "7.18.1.2800"
 = MetaData.Schema.HD5 []
-- MetaData.Schema.HD12
 + MetaData.Schema.B7 true

@@ -4,6 +4,8 @@
 		<Items>
 			<Item Name="Caption" Value="Страница редактирования: &quot;Недвижимость&quot;" />
 			<Item Name="LocalizableStrings.MyButtonCaption.Value" Value="Кнопка!" />
+			<Item Name="LocalizableStrings.Tab8c969516TabLabelTabCaption.Value" Value="Просмотры" />
+			<Item Name="LocalizableStrings.UsrSchema65801e50Detailb9ae778bDetailCaptionOnPage.Value" Value="Просмотр недвижимости" />
 		</Items>
 	</Group>
 </Resources>

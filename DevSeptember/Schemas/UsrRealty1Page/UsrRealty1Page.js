@@ -1,7 +1,16 @@
-define("UsrRealty1Page", [], function() {
+define("UsrRealty1Page", ["RightUtilities"], function(RightUtilities) {
 	return {
 		entitySchemaName: "UsrRealty",
-		attributes: {},
+		attributes: {
+			"CurrentUserName": {
+				dataValueType: this.Terrasoft.DataValueType.TEXT,
+				value: ""
+			},
+			"IsCCagent": {
+				dataValueType: this.Terrasoft.DataValueType.BOOLEAN,
+				value: false
+			},
+		},
 		modules: /**SCHEMA_MODULES*/{}/**SCHEMA_MODULES*/,
 		details: /**SCHEMA_DETAILS*/{
 			"Files": {
@@ -11,10 +20,105 @@ define("UsrRealty1Page", [], function() {
 					"masterColumn": "Id",
 					"detailColumn": "UsrRealty"
 				}
+			},
+			"UsrSchema65801e50Detailb9ae778b": {
+				"schemaName": "UsrSchema65801e50Detail",
+				"entitySchemaName": "UsrRealtyVisit",
+				"filter": {
+					"detailColumn": "UsrRealty",
+					"masterColumn": "Id"
+				}
 			}
 		}/**SCHEMA_DETAILS*/,
-		businessRules: /**SCHEMA_BUSINESS_RULES*/{}/**SCHEMA_BUSINESS_RULES*/,
+		businessRules: /**SCHEMA_BUSINESS_RULES*/{
+			"UsrComment": {
+				"a5757e58-7e96-48eb-9d50-9a60133ef79f": {
+					"uId": "a5757e58-7e96-48eb-9d50-9a60133ef79f",
+					"enabled": true,
+					"removed": false,
+					"ruleType": 0,
+					"property": 0,
+					"logical": 0,
+					"conditions": [
+						{
+							"comparisonType": 7,
+							"leftExpression": {
+								"type": 1,
+								"attribute": "UsrPriceUSD"
+							},
+							"rightExpression": {
+								"type": 0,
+								"value": 5000,
+								"dataValueType": 5
+							}
+						}
+					]
+				}
+			},
+			"UsrOfferType": {
+				"05f3698e-d1d2-48f8-8ecd-1ac7d86ef001": {
+					"uId": "05f3698e-d1d2-48f8-8ecd-1ac7d86ef001",
+					"enabled": true,
+					"removed": false,
+					"ruleType": 0,
+					"property": 1,
+					"logical": 0,
+					"conditions": [
+						{
+							"comparisonType": 3,
+							"leftExpression": {
+								"type": 1,
+								"attribute": "CurrentUserName"
+							},
+							"rightExpression": {
+								"type": 0,
+								"value": "Supervisor",
+								"dataValueType": 1
+							}
+						}
+					]
+				}
+			},
+			"UsrStatus": {
+				"a61fab3e-f94c-4b6f-9fb9-74eb4dd672f7": {
+					"uId": "a61fab3e-f94c-4b6f-9fb9-74eb4dd672f7",
+					"enabled": true,
+					"removed": false,
+					"ruleType": 0,
+					"property": 2,
+					"logical": 0,
+					"conditions": [
+						{
+							"comparisonType": 3,
+							"leftExpression": {
+								"type": 1,
+								"attribute": "IsCCagent"
+							},
+							"rightExpression": {
+								"type": 0,
+								"value": true,
+								"dataValueType": 12
+							}
+						}
+					]
+				}
+			}
+		}/**SCHEMA_BUSINESS_RULES*/,
 		methods: {
+			onEntityInitialized: function(){
+				this.callParent(arguments);
+				this.console.log("Terrasoft.SysValue.CURRENT_USER.displayValue = "+Terrasoft.SysValue.CURRENT_USER.displayValue);
+				this.set("CurrentUserName", Terrasoft.SysValue.CURRENT_USER.displayValue);
+				
+				var OperData={
+					operation: "IsCCagentsMember"
+				};
+
+				RightUtilities.checkCanExecuteOperation(OperData, this.getOperation, this);
+			},
+			getOperation: function(result){
+				this.set("IsCCagent", result);
+			},
 			MyButtonClick: function() {
 				this.console.log("Button pressed");
 			//todo
@@ -27,38 +131,6 @@ define("UsrRealty1Page", [], function() {
 		},
 		dataModels: /**SCHEMA_DATA_MODELS*/{}/**SCHEMA_DATA_MODELS*/,
 		diff: /**SCHEMA_DIFF*/[
-			// Метаданные для добавления на страницу пользовательской кнопки.
-            {
-                // Выполняется операция добавления компонента на страницу.
-                "operation": "insert",
-                // Мета-имя родительского контейнера, в который добавляется кнопка.
-                "parentName": "ProfileContainer",
-                // Кнопка добавляется в коллекцию компонентов
-                // родительского элемента.
-                "propertyName": "items",
-                // Мета-имя добавляемой кнопки.
-                "name": "MyButton",
-                // Свойства, передаваемые в конструктор компонента.
-                "values": {
-                    // Тип добавляемого элемента — кнопка.
-                    itemType: Terrasoft.ViewItemType.BUTTON,
-                    // Привязка заголовка кнопки к локализуемой строке схемы.
-                    caption: {bindTo: "Resources.Strings.MyButtonCaption"},
-                    // Привязка метода-обработчика нажатия кнопки.
-                    click: {bindTo: "MyButtonClick"},
-                    // Привязка свойства доступности кнопки.
-                    enabled: {bindTo: "getMyButtonEnabled"},
-                    // Стиль отображения кнопки.
-                    "style": Terrasoft.controls.ButtonEnums.style.RED,
-					"layout": {
-						"colSpan": 12,
-						"rowSpan": 1,
-						"column": 0,
-						"row": 4,
-						"layoutName": "ProfileContainer"
-					},
-                }
-            },
 			{
 				"operation": "insert",
 				"name": "UsrName25f923f8-d90d-4c9c-89ec-83085ada858a",
@@ -134,6 +206,33 @@ define("UsrRealty1Page", [], function() {
 			},
 			{
 				"operation": "insert",
+				"name": "MyButton",
+				"values": {
+					"itemType": 5,
+					"caption": {
+						"bindTo": "Resources.Strings.MyButtonCaption"
+					},
+					"click": {
+						"bindTo": "MyButtonClick"
+					},
+					"enabled": {
+						"bindTo": "getMyButtonEnabled"
+					},
+					"style": "red",
+					"layout": {
+						"colSpan": 24,
+						"rowSpan": 1,
+						"column": 0,
+						"row": 4,
+						"layoutName": "ProfileContainer"
+					}
+				},
+				"parentName": "ProfileContainer",
+				"propertyName": "items",
+				"index": 4
+			},
+			{
+				"operation": "insert",
 				"name": "STRINGe0042e12-3429-476b-95fc-dd9534ef1ce1",
 				"values": {
 					"layout": {
@@ -152,25 +251,6 @@ define("UsrRealty1Page", [], function() {
 			},
 			{
 				"operation": "insert",
-				"name": "LOOKUPeac8513e-fa03-4cb6-bb9b-deed6cc09b96",
-				"values": {
-					"layout": {
-						"colSpan": 12,
-						"rowSpan": 1,
-						"column": 0,
-						"row": 1,
-						"layoutName": "Header"
-					},
-					"bindTo": "UsrStatus",
-					"enabled": true,
-					"contentType": 3
-				},
-				"parentName": "Header",
-				"propertyName": "items",
-				"index": 1
-			},
-			{
-				"operation": "insert",
 				"name": "LOOKUPed32c27a-8de8-45c2-b2d5-f5322538385e",
 				"values": {
 					"layout": {
@@ -186,7 +266,44 @@ define("UsrRealty1Page", [], function() {
 				},
 				"parentName": "Header",
 				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "LOOKUPeac8513e-fa03-4cb6-bb9b-deed6cc09b96",
+				"values": {
+					"layout": {
+						"colSpan": 12,
+						"rowSpan": 1,
+						"column": 0,
+						"row": 1,
+						"layoutName": "Header"
+					},
+					"bindTo": "UsrStatus",
+					"enabled": true,
+					"contentType": 3
+				},
+				"parentName": "Header",
+				"propertyName": "items",
 				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "CreatedOn12c5232f-a986-47ef-bb1f-5e94dbfe29d6",
+				"values": {
+					"layout": {
+						"colSpan": 12,
+						"rowSpan": 1,
+						"column": 12,
+						"row": 1,
+						"layoutName": "Header"
+					},
+					"bindTo": "CreatedOn",
+					"enabled": false
+				},
+				"parentName": "Header",
+				"propertyName": "items",
+				"index": 3
 			},
 			{
 				"operation": "insert",
@@ -205,25 +322,32 @@ define("UsrRealty1Page", [], function() {
 				},
 				"parentName": "Header",
 				"propertyName": "items",
-				"index": 3
+				"index": 4
 			},
 			{
 				"operation": "insert",
-				"name": "CreatedOn12c5232f-a986-47ef-bb1f-5e94dbfe29d6",
+				"name": "Tab8c969516TabLabel",
 				"values": {
-					"layout": {
-						"colSpan": 12,
-						"rowSpan": 1,
-						"column": 12,
-						"row": 1,
-						"layoutName": "Header"
+					"caption": {
+						"bindTo": "Resources.Strings.Tab8c969516TabLabelTabCaption"
 					},
-					"bindTo": "CreatedOn",
-					"enabled": false
+					"items": [],
+					"order": 0
 				},
-				"parentName": "Header",
+				"parentName": "Tabs",
+				"propertyName": "tabs",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "UsrSchema65801e50Detailb9ae778b",
+				"values": {
+					"itemType": 2,
+					"markerValue": "added-detail"
+				},
+				"parentName": "Tab8c969516TabLabel",
 				"propertyName": "items",
-				"index": 4
+				"index": 0
 			},
 			{
 				"operation": "insert",
@@ -233,11 +357,11 @@ define("UsrRealty1Page", [], function() {
 						"bindTo": "Resources.Strings.NotesAndFilesTabCaption"
 					},
 					"items": [],
-					"order": 0
+					"order": 1
 				},
 				"parentName": "Tabs",
 				"propertyName": "tabs",
-				"index": 0
+				"index": 1
 			},
 			{
 				"operation": "insert",
@@ -295,7 +419,7 @@ define("UsrRealty1Page", [], function() {
 				"operation": "merge",
 				"name": "ESNTab",
 				"values": {
-					"order": 1
+					"order": 2
 				}
 			}
 		]/**SCHEMA_DIFF*/

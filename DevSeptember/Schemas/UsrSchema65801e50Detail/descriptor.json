@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "81746eb6-f4ae-4c6d-b3a9-3079ea6f39a4",
+    "Name": "UsrSchema65801e50Detail",
+    "ModifiedOnUtc": "\/Date(1632447068000)\/",
+    "Parent": {
+      "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
+      "Name": "BaseGridDetailV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Просмотр недвижимости"
+  }
+}
