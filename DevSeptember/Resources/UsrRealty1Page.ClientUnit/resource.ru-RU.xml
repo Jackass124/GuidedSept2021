@@ -6,6 +6,7 @@
 			<Item Name="LocalizableStrings.MyButtonCaption.Value" Value="Кнопка!" />
 			<Item Name="LocalizableStrings.Tab8c969516TabLabelTabCaption.Value" Value="Просмотры" />
 			<Item Name="LocalizableStrings.UsrSchema65801e50Detailb9ae778bDetailCaptionOnPage.Value" Value="Просмотр недвижимости" />
+			<Item Name="LocalizableStrings.ValueMustBePositive.Value" Value="Значение должно быть больше 0" />
 		</Items>
 	</Group>
 </Resources>

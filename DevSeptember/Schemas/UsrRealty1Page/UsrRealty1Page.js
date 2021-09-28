@@ -10,6 +10,20 @@ define("UsrRealty1Page", ["RightUtilities"], function(RightUtilities) {
 				dataValueType: this.Terrasoft.DataValueType.BOOLEAN,
 				value: false
 			},
+			"UsrCommissionUSD":{
+				dependencies: [
+                    {
+                        columns: ["UsrPriceUSD", "UsrOfferType"],
+                        methodName: "calculateCommission"
+                    }
+                ]
+     
+			},
+			"UsrOfferType":{
+				lookupListConfig:{
+					columns: ["UsrCommissionCoeff"]	
+				},
+		}
 		},
 		modules: /**SCHEMA_MODULES*/{}/**SCHEMA_MODULES*/,
 		details: /**SCHEMA_DETAILS*/{
@@ -22,7 +36,7 @@ define("UsrRealty1Page", ["RightUtilities"], function(RightUtilities) {
 				}
 			},
 			"UsrSchema65801e50Detailb9ae778b": {
-				"schemaName": "UsrSchema65801e50Detail",
+				"schemaName": "UsrRealtyVisitDetailGrid",
 				"entitySchemaName": "UsrRealtyVisit",
 				"filter": {
 					"detailColumn": "UsrRealty",
@@ -105,6 +119,37 @@ define("UsrRealty1Page", ["RightUtilities"], function(RightUtilities) {
 			}
 		}/**SCHEMA_BUSINESS_RULES*/,
 		methods: {
+			calculateCommission: function(){
+				var result=0;
+				var price=this.get("UsrPriceUSD");
+				var offerTypeObject=this.get("UsrOfferType");
+				if (offerTypeObject){
+					var coeff=offerTypeObject.UsrCommissionCoeff;
+					result=coeff*price;
+				}
+				this.set("UsrCommissionUSD",result);
+			},
+			
+			positiveValueValidator: function(value,column){
+				let msg="";
+				if (value<=0){
+					msg=this.get("Resources.Strings.ValueMustBePositive");
+				}
+				return {
+                    // Сообщение об ошибке валидации.
+                    invalidMessage: msg
+                };
+			},
+			
+			// Переопределение базового метода, инициализирующего пользовательские валидаторы.
+            setValidationConfig: function() {
+                // Вызывает инициализацию валидаторов родительской модели представления.
+                this.callParent(arguments);
+                this.addColumnValidator("UsrPriceUSD", this.positiveValueValidator);
+				this.addColumnValidator("UsrAreaSqrM", this.positiveValueValidator);
+
+            },
+			
 			onEntityInitialized: function(){
 				this.callParent(arguments);
 				this.console.log("Terrasoft.SysValue.CURRENT_USER.displayValue = "+Terrasoft.SysValue.CURRENT_USER.displayValue);
@@ -230,6 +275,24 @@ define("UsrRealty1Page", ["RightUtilities"], function(RightUtilities) {
 				"parentName": "ProfileContainer",
 				"propertyName": "items",
 				"index": 4
+			},
+			{
+				"operation": "insert",
+				"name": "FLOAT033d84de-e0ed-4c37-bd11-aba7c7f9bb70",
+				"values": {
+					"layout": {
+						"colSpan": 24,
+						"rowSpan": 1,
+						"column": 0,
+						"row": 5,
+						"layoutName": "ProfileContainer"
+					},
+					"bindTo": "UsrCommissionUSD",
+					"enabled": false
+				},
+				"parentName": "ProfileContainer",
+				"propertyName": "items",
+				"index": 5
 			},
 			{
 				"operation": "insert",

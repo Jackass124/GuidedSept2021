@@ -1,9 +1,0 @@
-= MetaData.Schema.UId "81746eb6-f4ae-4c6d-b3a9-3079ea6f39a4"
-= MetaData.Schema.A2 "UsrSchema65801e50Detail"
-= MetaData.Schema.A5 "ac4f7f0f-d5d5-4e8b-997a-a2f7c46f033e"
-= MetaData.Schema.B2.["8f7c31a4-b656-47c9-a503-a72d0b3dd077"].A4 "81746eb6-f4ae-4c6d-b3a9-3079ea6f39a4"
-= MetaData.Schema.B6 "a1c9edcd-7de8-a4de-d04d-4a0d855a7761"
-= MetaData.Schema.B8 "7.18.1.2800"
-= MetaData.Schema.HD5 []
-- MetaData.Schema.B7
-+ MetaData.Schema.B7 false

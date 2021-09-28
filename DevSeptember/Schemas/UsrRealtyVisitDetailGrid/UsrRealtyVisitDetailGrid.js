@@ -1,4 +1,4 @@
-define("UsrSchema65801e50Detail", ["ConfigurationGrid", "ConfigurationGridGenerator",
+define("UsrRealtyVisitDetailGrid", ["ConfigurationGrid", "ConfigurationGridGenerator",
 	"ConfigurationGridUtilitiesV2"], function() {
 	return {
 		entitySchemaName: "UsrRealtyVisit",
