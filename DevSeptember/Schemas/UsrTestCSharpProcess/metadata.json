@@ -7,7 +7,16 @@
       "A5": "540b6137-d1de-4a7b-9043-06847e0d78de",
       "B1": [],
       "B2": [],
-      "B3": [],
+      "B3": [
+        {
+          "UId": "9a7ec0db-a197-4ab5-978a-88847f49c728",
+          "A2": "Terrasoft.Configuration",
+          "A3": "eac23f57-28f9-4971-ae74-b03ff1359230",
+          "A4": "eac23f57-28f9-4971-ae74-b03ff1359230",
+          "A5": "540b6137-d1de-4a7b-9043-06847e0d78de",
+          "GF1": "null"
+        }
+      ],
       "B6": "a1c9edcd-7de8-a4de-d04d-4a0d855a7761",
       "B8": "7.18.1.2800",
       "FJ1": [],
@@ -85,7 +94,7 @@
           "A4": "eac23f57-28f9-4971-ae74-b03ff1359230",
           "A5": "a1c9edcd-7de8-a4de-d04d-4a0d855a7761",
           "IL2": "64aa4769-3b4a-44fd-b74b-7f57af1f4595",
-          "BL3": "600;184",
+          "BL3": "689;184",
           "BL7": "1bd93619-0574-454e-bb4e-cf53b9eb9470",
           "BL8": "eac23f57-28f9-4971-ae74-b03ff1359230",
           "BN2": "31;31",
@@ -107,7 +116,7 @@
           "BO3": true,
           "BP2": [],
           "CL2": "FFFFFFFF",
-          "CH1": "var esq = new EntitySchemaQuery(UserConnection.EntitySchemaManager, \"Account\");\nvar idColumn = esq.AddColumn(\"Id\");\nvar nameColumn = esq.AddColumn(\"Name\");\nvar typeFilter = esq.CreateFilterWithParameters(FilterComparisonType.Equal, \"Type\", new Guid(\"03a75490-53e6-df11-971b-001d60e938c6\"));\n// \"Customer\" account type\nesq.Filters.Add(typeFilter);\nvar entityCollection = esq.GetEntityCollection(UserConnection);\nDictionary <Guid, string> dict = new Dictionary<Guid, string>();\nforeach(var entity in entityCollection) {\n\tGuid id = entity.GetTypedColumnValue<Guid>(idColumn.Name);\n\t// reading using column alias\n\tstring name = entity.GetTypedColumnValue<string>(nameColumn.Name);\n\t// reading using column alias\n\tdict.Add(id, name);\n\t\n}\nreturn true;\n",
+          "CH1": "/*var esq = new EntitySchemaQuery(UserConnection.EntitySchemaManager, \"Account\");\nvar idColumn = esq.AddColumn(\"Id\");\nvar nameColumn = esq.AddColumn(\"Name\");\nvar typeFilter = esq.CreateFilterWithParameters(FilterComparisonType.Equal, \"Type\", new Guid(\"03a75490-53e6-df11-971b-001d60e938c6\"));\n// \"Customer\" account type\nesq.Filters.Add(typeFilter);\nvar entityCollection = esq.GetEntityCollection(UserConnection);\nDictionary <Guid, string> dict = new Dictionary<Guid, string>();\nforeach(var entity in entityCollection) {\n\tGuid id = entity.GetTypedColumnValue<Guid>(idColumn.Name);\n\t// reading using column alias\n\tstring name = entity.GetTypedColumnValue<string>(nameColumn.Name);\n\t// reading using column alias\n\tdict.Add(id, name);\n\t\n}*/\nvar c = new MyClass();\nstring result=c.MyMethod(UserConnection);\nreturn true;\n",
           "CH2": true
         },
         {
@@ -142,7 +151,7 @@
           "CI5": "FF939598",
           "CI6": 1,
           "CI11": "319;200",
-          "CI12": "600;200"
+          "CI12": "689;200"
         }
       ],
       "BK9": [],
