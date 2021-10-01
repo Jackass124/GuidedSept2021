@@ -1,4 +1,4 @@
-define("UsrRealty1Page", ["RightUtilities"], function(RightUtilities) {
+define("UsrRealty1Page", ["ServiceHelper"], function(ServiceHelper) {
 	return {
 		entitySchemaName: "UsrRealty",
 		attributes: {
@@ -217,7 +217,21 @@ define("UsrRealty1Page", ["RightUtilities"], function(RightUtilities) {
 			MyButtonClick: function() {
 				this.console.log("Button pressed");
 			//todo
+				var serviceName = "RealtyRequestService";
+				var methodName = "GetCountByStatusId";
+				var data = {
+				statusId : "e8486241-7f7e-4930-9ea1-8d95454fbe82"
+				};
+				this.console.log("1");
+				ServiceHelper.callService(serviceName,methodName,this.getWebServiceResult,data,this);
+				this.console.log("2");
 		},
+			
+			getWebServiceResult: function(response, success){
+			this.console.log("3");
+			this.Terrasoft.showInformation("Total count by statusId: " + response.GetCountByStatusIdResult);
+			},
+			
 			getMyButtonEnabled: function() {
 				var name=this.get("UsrName");
 				var result=!!name;
