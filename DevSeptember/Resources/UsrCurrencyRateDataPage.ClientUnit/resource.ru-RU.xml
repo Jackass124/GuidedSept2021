@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="UsrCurrencyRateDataPage" />
+			<Item Name="Parameters.8fb0a3a0-8844-476f-a5a2-d80b87838d01.Caption" Value="Курс RUB/USD" />
+			<Item Name="Parameters.9958321c-0b95-4bf0-a643-8ed719937da1.Caption" Value="Дата" />
+			<Item Name="Parameters.c49bd85e-159a-49ee-b10a-3c3bca63d7d5.Value.c4841740-ff8c-406f-8626-1c78f78608bf.Caption" Value="Закрыть" />
+			<Item Name="Parameters.c49bd85e-159a-49ee-b10a-3c3bca63d7d5.Value.f073e66a-36ec-47d7-9c6a-e5952dbf05a3.Caption" Value="Сохранить" />
+			<Item Name="Parameters.f2665f28-f35d-4376-9680-2f384950e8bb.Caption" Value="Тело ответа" />
+		</Items>
+	</Group>
+</Resources>

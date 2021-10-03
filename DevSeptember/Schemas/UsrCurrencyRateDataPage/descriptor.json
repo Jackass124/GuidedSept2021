@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "d5f5f05d-e1d3-42d5-bb7c-60fc9bdbb245",
+    "Name": "UsrCurrencyRateDataPage",
+    "ModifiedOnUtc": "\/Date(1633224488000)\/",
+    "Parent": {
+      "UId": "5826ff24-46c6-4169-9223-2aaad9ec2e18",
+      "Name": "BasePageSimpleProcessTemplate"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "UsrCurrencyRateDataPage"
+  }
+}
