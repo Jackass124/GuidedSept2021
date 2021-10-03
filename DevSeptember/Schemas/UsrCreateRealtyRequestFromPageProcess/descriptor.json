@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "bfe74c42-11bc-4f73-b770-adaf3377c432",
+    "Name": "UsrCreateRealtyRequestFromPageProcess",
+    "ModifiedOnUtc": "\/Date(1633218963000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Создать заявку недвижимости с применением преднастроенной таблицы"
+  }
+}

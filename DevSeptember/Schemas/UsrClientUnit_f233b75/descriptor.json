@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "a22da886-e8eb-4355-88a4-ceaa2fda8201",
+    "Name": "UsrClientUnit_f233b75",
+    "ModifiedOnUtc": "\/Date(1633218754000)\/",
+    "Parent": {
+      "UId": "5826ff24-46c6-4169-9223-2aaad9ec2e18",
+      "Name": "BasePageSimpleProcessTemplate"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Вводим данные для заявки недвижимости"
+  }
+}
