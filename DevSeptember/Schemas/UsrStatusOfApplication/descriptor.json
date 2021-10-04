@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "30365e04-c657-4d4a-a123-ad6e9f58004f",
+    "Name": "UsrStatusOfApplication",
+    "ModifiedOnUtc": "\/Date(1633380292000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Состояния заявок"
+  }
+}

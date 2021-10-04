@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "986b9b2e-ec95-4225-a657-172818059ec9",
+    "Name": "UsrApplicationsTag",
+    "ModifiedOnUtc": "\/Date(1633264762000)\/",
+    "Parent": {
+      "UId": "9e3f203c-e905-4de5-9468-335b193f2439",
+      "Name": "BaseTag"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Тег раздела Заявки"
+  }
+}

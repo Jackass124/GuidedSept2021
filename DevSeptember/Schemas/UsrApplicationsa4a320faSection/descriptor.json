@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "8c61e582-064f-44cf-9b83-bcf9f1acc154",
+    "Name": "UsrApplicationsa4a320faSection",
+    "ModifiedOnUtc": "\/Date(1633264740000)\/",
+    "Parent": {
+      "UId": "7912fb69-4fee-429f-8b23-93943c35d66d",
+      "Name": "BaseSectionV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Схема раздела: \"Заявки\""
+  }
+}

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Заявки" />
+			<Item Name="Columns.UsrApplicant.Caption" Value="Заявитель" />
+			<Item Name="Columns.UsrDatetimeOfFinishing.Caption" Value="Дедлайн выполнения заявки" />
+			<Item Name="Columns.UsrDescriptionOfApplication.Caption" Value="Описание" />
+			<Item Name="Columns.UsrExecutor.Caption" Value="Исполнитель" />
+			<Item Name="Columns.UsrLookupOwner.Caption" Value="Ответственный" />
+			<Item Name="Columns.UsrNotes.Caption" Value="Заметки" />
+			<Item Name="Columns.UsrNumber.Caption" Value="Номер" />
+			<Item Name="Columns.UsrStatus.Caption" Value="Состояние" />
+		</Items>
+	</Group>
+</Resources>
