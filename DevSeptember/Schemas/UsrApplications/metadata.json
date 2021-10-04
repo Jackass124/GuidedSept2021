@@ -76,12 +76,11 @@
 - MetaData.Schema.D2.["3fabd836-6a53-4d8d-9069-6df88d9dae1e"].E16
 + MetaData.Schema.D2 {
   "UId": "14773563-eb7f-4a87-9899-411fe4c97283",
-  "A2": "UsrNumber",
+  "A2": "UsrName",
   "A3": "c8c053da-ab82-4956-a2eb-4a7e6fb3b98c",
   "A4": "c8c053da-ab82-4956-a2eb-4a7e6fb3b98c",
   "A5": "540b6137-d1de-4a7b-9043-06847e0d78de",
   "S2": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd",
-  "E2": 1,
   "E5": false
 }
 + MetaData.Schema.D2 {

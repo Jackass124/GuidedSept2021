@@ -2,8 +2,8 @@
 <Resources Culture="nl-NL">
 	<Group Type="String">
 		<Items>
+			<Item Name="Columns.UsrName.Caption" Value="Naam" />
 			<Item Name="Columns.UsrNotes.Caption" Value="Aantekeningen" />
-			<Item Name="Columns.UsrNumber.Caption" Value="Naam" />
 		</Items>
 	</Group>
 </Resources>

@@ -2,8 +2,8 @@
 <Resources Culture="ro-RO">
 	<Group Type="String">
 		<Items>
+			<Item Name="Columns.UsrName.Caption" Value="Nume" />
 			<Item Name="Columns.UsrNotes.Caption" Value="Notite" />
-			<Item Name="Columns.UsrNumber.Caption" Value="Nume" />
 		</Items>
 	</Group>
 </Resources>

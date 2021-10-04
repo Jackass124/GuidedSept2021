@@ -2,8 +2,8 @@
 <Resources Culture="ar-SA">
 	<Group Type="String">
 		<Items>
+			<Item Name="Columns.UsrName.Caption" Value="الاسم" />
 			<Item Name="Columns.UsrNotes.Caption" Value="الملاحظات" />
-			<Item Name="Columns.UsrNumber.Caption" Value="الاسم" />
 		</Items>
 	</Group>
 </Resources>

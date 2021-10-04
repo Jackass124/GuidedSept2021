@@ -28,7 +28,7 @@ define("UsrApplications1Page", [], function() {
 						"row": 0,
 						"layoutName": "ProfileContainer"
 					},
-					"bindTo": "UsrNumber",
+					"bindTo": "UsrName",
 					"enabled": true
 				},
 				"parentName": "ProfileContainer",

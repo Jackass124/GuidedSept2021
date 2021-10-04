@@ -2,8 +2,8 @@
 <Resources Culture="es-ES">
 	<Group Type="String">
 		<Items>
+			<Item Name="Columns.UsrName.Caption" Value="Nombre" />
 			<Item Name="Columns.UsrNotes.Caption" Value="Notas" />
-			<Item Name="Columns.UsrNumber.Caption" Value="Nombre" />
 		</Items>
 	</Group>
 </Resources>
