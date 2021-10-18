@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Страница редактирования: &quot;Программы плавания&quot;" />
+			<Item Name="LocalizableStrings.Tab070c97d2TabLabelTabCaption.Value" Value="Занятия в бассейне" />
+			<Item Name="LocalizableStrings.UsrSchema54e7c4c2Detailfd6bcf24DetailCaptionOnPage.Value" Value="Занятие в бассейне" />
+		</Items>
+	</Group>
+</Resources>

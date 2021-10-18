@@ -1,0 +1,26 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "3c758a53-667a-44b7-b6c6-a5e2b04f5d0f"
+        },
+        {
+          "SchemaColumnUId": "bd12ea8e-2bc2-42bf-925a-3ab766cc0b9f",
+          "Value": 20
+        },
+        {
+          "SchemaColumnUId": "0e3d3857-2203-40e4-b1ec-8e972007650e",
+          "Value": "995d4aa0-4f10-4bba-9a57-a9d0a9cb3f70",
+          "DisplayValue": "Общее"
+        },
+        {
+          "SchemaColumnUId": "991cf5ef-ffb8-49a5-add3-074a595f6c43",
+          "Value": "5449c675-6db9-47c2-9d73-e6d788158412",
+          "DisplayValue": "Программы плавания"
+        }
+      ]
+    }
+  ]
+}

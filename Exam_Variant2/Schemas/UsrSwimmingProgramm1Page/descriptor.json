@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "29509ce1-f8f0-41ba-a719-b47fed8f247d",
+    "Name": "UsrSwimmingProgramm1Page",
+    "ModifiedOnUtc": "\/Date(1634562884000)\/",
+    "Parent": {
+      "UId": "d62293c0-7f14-44b1-b547-735fb40499cd",
+      "Name": "BaseModulePageV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Страница редактирования: \"Программы плавания\"",
+    "DependsOn": []
+  }
+}
