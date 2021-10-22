@@ -2,13 +2,12 @@
   "Descriptor": {
     "UId": "d5c832f3-d9c4-4923-8525-61e8cde0b3c3",
     "Name": "UsrSwimLesson",
-    "ModifiedOnUtc": "\/Date(1634565381000)\/",
+    "ModifiedOnUtc": "\/Date(1634910355000)\/",
     "Parent": {
       "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
       "Name": "BaseEntity"
     },
     "ManagerName": "EntitySchemaManager",
-    "Caption": "Занятие в бассейне",
-    "DependsOn": []
+    "Caption": "Занятие в бассейне"
   }
 }

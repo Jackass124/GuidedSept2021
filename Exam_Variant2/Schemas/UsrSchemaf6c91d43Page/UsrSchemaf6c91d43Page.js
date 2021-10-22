@@ -78,23 +78,6 @@ define("UsrSchemaf6c91d43Page", [], function() {
 			},
 			{
 				"operation": "insert",
-				"name": "UsrLessonTime4cac0bd7-9eba-4ae4-8de0-31649671c3a8",
-				"values": {
-					"layout": {
-						"colSpan": 12,
-						"rowSpan": 1,
-						"column": 0,
-						"row": 2,
-						"layoutName": "Header"
-					},
-					"bindTo": "UsrLessonTime"
-				},
-				"parentName": "Header",
-				"propertyName": "items",
-				"index": 4
-			},
-			{
-				"operation": "insert",
 				"name": "UsrSwimmingProgramm80d48645-fd89-448f-ae5c-871625795ee3",
 				"values": {
 					"layout": {
@@ -105,6 +88,24 @@ define("UsrSchemaf6c91d43Page", [], function() {
 						"layoutName": "Header"
 					},
 					"bindTo": "UsrSwimmingProgramm"
+				},
+				"parentName": "Header",
+				"propertyName": "items",
+				"index": 4
+			},
+			{
+				"operation": "insert",
+				"name": "FLOATf35c29e0-59c8-4c3c-978c-700073046306",
+				"values": {
+					"layout": {
+						"colSpan": 12,
+						"rowSpan": 1,
+						"column": 0,
+						"row": 2,
+						"layoutName": "Header"
+					},
+					"bindTo": "UsrLessonTimeHour",
+					"enabled": true
 				},
 				"parentName": "Header",
 				"propertyName": "items",

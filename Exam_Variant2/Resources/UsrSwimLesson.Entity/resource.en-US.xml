@@ -6,6 +6,7 @@
 			<Item Name="Columns.UsrDatetimeLesson.Caption" Value="Дата занятия" />
 			<Item Name="Columns.UsrLessonState.Caption" Value="Состояние занятия" />
 			<Item Name="Columns.UsrLessonTime.Caption" Value="Длительность" />
+			<Item Name="Columns.UsrLessonTimeHour.Caption" Value="Длительность, час" />
 			<Item Name="Columns.UsrName.Caption" Value="Name" />
 			<Item Name="Columns.UsrParticipantNumber.Caption" Value="Число участников" />
 			<Item Name="Columns.UsrSwimmingProgramm.Caption" Value="Программы плавания" />

@@ -38,7 +38,119 @@ define("UsrSwimmingProgramm1Page", [], function() {
 				}
 			}
 		}/**SCHEMA_BUSINESS_RULES*/,
-		methods: {},
+		methods: {
+			
+			asyncValidate: function(callback, scope) {
+		this.callParent([function(response) {
+			if (!this.validateResponse(response)) {
+				return;
+			}
+			Terrasoft.chain(
+				function(next) {
+					this.validateSwimmingProgramm(function(response) {
+						if (this.validateResponse(response)) {
+							next();
+						}
+					}, this);
+				},
+				function(next) {
+					callback.call(scope, response);
+					next();
+				}, this);
+		}, this]);
+	},
+			
+			validateSwimmingProgramm: function(callback, scope) {
+			Terrasoft.SysSettings.querySysSettingsItem("UsrMaxNumberOfEveryDayActiveLesson", function(Maxcount) {
+			if (!this.changedValues){
+				callback.call(scope, {success:true});
+			}
+			var period = "";
+			var active = false;
+			var error_msg = this.get("Resources.Strings.ValidateEveryDayLesson");
+			if (this.get("UsrPeriod")) {
+				period = this.get("UsrPeriod").displayValue;
+			}
+			if (this.get("UsrActivity")) {
+				active = this.get("UsrActivity");
+			}
+			var esq = Ext.create("Terrasoft.EntitySchemaQuery", { rootSchemaName: "UsrSwimmingProgramm" });
+			esq.addColumn("UsrPeriod.Name", "UsrPeriodName");
+			esq.filters.addItem(esq.createColumnFilterWithParameter(Terrasoft.ComparisonType.EQUAL, 
+				"UsrPeriod.Name", "Ежедневно"));
+			esq.filters.addItem(esq.createColumnFilterWithParameter(Terrasoft.ComparisonType.EQUAL,
+				"UsrActivity", true));
+			esq.getEntityCollection(function(response) {
+				var result = {success: true};
+				var count=response.collection.getCount();
+				if (this.changedValues && period==="Ежедневно" && active===true && count>=Maxcount){
+					result.message = error_msg + Maxcount;
+					result.success = false;
+				}
+				callback.call(scope || this, result);
+			}, this);
+		}, this);
+	}
+},
+			/*asyncValidate: function(callback, scope) {
+				this.callParent([
+					function(response) {
+						if (!this.validateResponse(response)) 
+						{
+							return;
+						}
+					this.validateSwimmingProgramm(function(response) {
+						if (!this.validateResponse(response)) 
+						{
+							return;
+						}
+						callback.call(scope, response);
+					},
+					this);
+					},this]);
+			},
+			
+			validateSwimmingProgramm: function(callback, scope) {
+				Terrasoft.SysSettings.querySysSettingsItem("UsrMaxNumberOfEveryDayActiveLesson", function(Maxcount) {
+				if (!this.changedValues){
+					callback.call(scope, {success:true});
+				}
+				var esq = this.Ext.create("Terrasoft.EntitySchemaQuery", {
+					rootSchemaName: "UsrSwimmingProgramm"
+				});
+				
+				var error_msg = this.get("Resources.Strings.ValidateEveryDayLesson");
+				var period='';
+				period = this.get("UsrPeriod").displayValue;
+				var active=false;
+				active = this.get("UsrActivity");
+				esq.addAggregationSchemaColumn("UsrPeriod", Terrasoft.AggregationType.COUNT, "EveryDay");
+				var Filter1 = esq.createColumnFilterWithParameter(this.Terrasoft.ComparisonType.EQUAL,"UsrPeriod.Name", "Ежедневно");
+				var Filter2 = esq.createColumnFilterWithParameter(this.Terrasoft.ComparisonType.EQUAL,"UsrActivity", true);
+				esq.filters.addItem(Filter1);
+				esq.filters.addItem(Filter2);
+				
+				esq.getEntityCollection(function(response) {
+					if (response.success && response.collection) {
+						var count = 0;
+						var items = response.collection.getItems();
+						if (items.length > 0) {
+							count = items[0].get("EveryDay");
+						}
+
+						if (count >= Maxcount) {
+							if (callback) {
+								callback.call(this, {success: false,message: error_msg + Maxcount});
+							}
+						}
+						else 
+							if (callback){
+							callback.call(scope, {success: true});
+						}
+					}
+				}, this);
+			}, this);
+		},*/
 		dataModels: /**SCHEMA_DATA_MODELS*/{}/**SCHEMA_DATA_MODELS*/,
 		diff: /**SCHEMA_DIFF*/[
 			{
